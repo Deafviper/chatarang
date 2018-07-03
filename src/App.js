@@ -1,17 +1,16 @@
-import React, { Component } from 'react'
+import React, { Component } from 'react';
 
-import Sidebar from './Sidebar'
-import Chat from './Chat'
+import './App.css';
+import Main from './Main'
 
-class Main extends Component {
+class App extends Component {
   render() {
     return (
-      <div className="Main">
-        <Sidebar />
-        <Chat />
+      <div className="App">
+       <Main/>
       </div>
-    )
+    );
   }
 }
 
-export default Main
+export default App;
