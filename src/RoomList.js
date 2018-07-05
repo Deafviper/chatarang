@@ -12,8 +12,8 @@ class RoomList extends Component {
       >
         <h2 style ={styles.h2}>Rooms</h2>
         <ul style ={styles.ul}>
-          <li style ={styles.li}><a  style ={styles.a} href="#">#general</a></li>
-          <li style ={styles.li}><a style ={styles.a} href="#">#random</a></li>
+          <li style ={styles.li}><a  style ={styles.a} href="#"># general</a></li>
+          <li style ={styles.li}><a style ={styles.a} href="#"># random</a></li>
         </ul>
       </nav>
       )

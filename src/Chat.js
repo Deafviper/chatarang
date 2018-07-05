@@ -18,16 +18,7 @@ class Chat extends Component {
             email: 'davey@fretless.com',
           },
           body: 'Chatting up a storm, yo!',
-        },
-
-        {
-          id: 2,
-          user: {
-            uid: 'sdlfkj35948',
-            displayName: 'Dana',
-            email: 'dana@fretless.com',
-          },
-          body: 'This guy is so annoying. I hate my job.',
+          time:`${new Date().getHours() + ":" +new Date().getMinutes()}`,
         },
       ],
     }

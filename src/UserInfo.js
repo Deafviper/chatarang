@@ -1,3 +1,5 @@
+import React from 'react'
+import SignOutButton from './SignOutButton';
 
 const UserInfo = (props) => {
     return (
@@ -10,9 +12,7 @@ const UserInfo = (props) => {
         <div style = {styles.user} className="user">
           {props.user.displayName}
         </div>
-        <a style = {styles.a} href="#">
-        <i class="fa fa-sign-out" aria-hidden="true"></i>
-        </a>
+        <SignOutButton />
         </div>
     )
   }
@@ -24,10 +24,11 @@ const UserInfo = (props) => {
         alignItems: 'center',
       },
       Avatar: {
-      marginRight : '0.1rem',
+      marginLeft: '0.5rem',
+      marginRight: '0.5rem',
       },
       user: {
-        flex: 1,
+        flex: '.9',
       },
       a: {
         border: '0',
