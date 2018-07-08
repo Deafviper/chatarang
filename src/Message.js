@@ -27,9 +27,6 @@ const styles  ={
     paddingLeft: '0.5rem',
   }
   
-
-
-
 }
 
 export default Message
