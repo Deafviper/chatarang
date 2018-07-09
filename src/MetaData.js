@@ -1,29 +1,36 @@
 import React from 'react'
 
-const Metadata = (props) => {
+const Metadata = ({ message }) => {
   return (
-      <div style = {styles.Metadata}>
-             <div style = {styles.user}>{props.message.user.displayName}</div>
-            <div style = {styles.time}>{props.message.time} </div>
+    <div
+      className="Metadata"
+      style={styles.metadata}
+    >
+      <div style={styles.user}>
+        {message.user.displayName}
+      </div>
+      <div style={styles.time}>
+        1:10 PM
+      </div>
     </div>
   )
 }
 
-const styles  ={
-    Metadata: {
-        display: 'flex',
-        alignitems: 'baseline',
-      },
-      
-      user: {
-        fontWeight: 'bold',
-        marginRight: '0.5rem',
-      },
-      
-      time: {
-        color:'#999',
-        fontSize: '0.8rem',
-      },
+const styles = {
+  metadata: {
+    display: 'flex',
+    alignItems: 'baseline',
+  },
+
+  user: {
+    fontWeight: 'bold',
+    marginRight: '0.5rem',
+  },
+
+  time: {
+    color: '#999',
+    fontSize: '0.8rem',
+  },
 }
 
 export default Metadata

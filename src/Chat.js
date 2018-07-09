@@ -9,7 +9,7 @@ class Chat extends Component {
     super()
 
     this.state = {
-      messages: []
+      messages: [],
     }
   }
 
@@ -19,7 +19,6 @@ class Chat extends Component {
 
     messages.push({
       id: `${user.uid}-${Date.now()}`,
-      time:`${new Date().getHours() + ":" +new Date().getMinutes()}`,
       user,
       body,
     })
@@ -29,7 +28,10 @@ class Chat extends Component {
 
   render() {
     return (
-      <div style = {styles.Chat} className="Chat">
+      <div
+        className="Chat"
+        style={styles}
+      >
         <ChatHeader />
         <MessageList messages={this.state.messages} />
         <MessageForm addMessage={this.addMessage} />
@@ -39,11 +41,9 @@ class Chat extends Component {
 }
 
 const styles = {
-  Chat: {
-    flex: 1,
-    display: 'flex',
-    flexDirection: 'column',
-  }
-  
+  flex: 1,
+  display: 'flex',
+  flexDirection: 'column',
 }
+
 export default Chat
