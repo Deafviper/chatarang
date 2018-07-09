@@ -1,21 +1,26 @@
 import React from 'react'
 
-const Avatar = (props) => {
+const Avatar = ({ user }) => {
+  const imageUrl = user.photoUrl || `https://api.adorable.io/avatars/40/${user.email}.png`
+
   return (
-      <div style = {styles.Avatar}>
-            <img height='40px' width = '40px' src='https://www.shareicon.net/data/256x256/2015/09/14/100868_skull_512x512.png'/>
-    </div>
+    <div
+      className="Avatar"
+      style={{
+        ...styles,
+        backgroundImage: `url(${imageUrl})`,
+      }}
+    ></div>
   )
 }
 
-const styles  ={
-    Avatar: {
-        height: '40px',
-        width: '40px',
-        fontSize: '1rem',
-        borderRadius: '20px',
-        
-      }      
+const styles = {
+  marginRight: '0.5rem',
+  height: '40px',
+  width: '40px',
+  fontSize: '1rem',
+  borderRadius: '20px',
+  backgroundSize: '40px 40px',
 }
 
 export default Avatar

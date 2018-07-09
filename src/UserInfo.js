@@ -1,5 +1,4 @@
 import React from 'react'
-
 import Avatar from './Avatar'
 import SignOutButton from './SignOutButton'
 
@@ -28,6 +27,8 @@ const styles = {
 
   user: {
     flex: 1,
+    overflowX: 'hidden',
+    textOverflow: 'ellipsis',
   }
 }
 
